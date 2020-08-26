@@ -1,6 +1,6 @@
 
 <!---->課題4
-@extends('profile')
+@extends(''layouts.profile')
 
 @section('title','プロフィールの新規作成')
 
