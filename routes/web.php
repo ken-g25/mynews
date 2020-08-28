@@ -18,8 +18,11 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function() {
     Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
     //
-    Route::get('admin/profile/create','Admin\ProfileController@add')->middleware('auth');
-    Route::get('admin/profile/edit','Admin\ProfileController@edit')->middleware('auth');
+    Route::get('profile/create','Admin\ProfileController@add')->middleware('auth');
+    Route::get('profile/edit','Admin\ProfileController@edit')->middleware('auth');
+    Route::post('news/create', 'Admin\NewsController@create');
+    Route::post('profile/create','Admin\ProfileController@create');
+    Route::post('profile/edit','Admin\ProfileController@update');
 });
 
 // 課題3
