@@ -9,6 +9,14 @@
         <div class="row">
             <body>
                 <h1>Myプロフィール作成画面</h1>
+                
+                @if (count($errors) > 0)
+                        <ul>
+                            @foreach($errors->all() as $e)
+                                <li>{{ $e }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
             
                 <form action = "{{action('Admin\ProfileController@create')}}" method="post" enctype="multipart/form-data">
                 <p>名前：<input type="text" name="name"/></p>
