@@ -41,13 +41,13 @@ class ProfileController extends Controller
         $profile_form = $request->all();
     //   if (isset($profile_form['image'])) {
     //     $path = $request->file('image')->store('public/image');
-    //     $news->image_path = basename($path);
-    //     unset($news_form['image']);
+    //     $profile->image_path = basename($path);
+    //     unset($profile_form['image']);
     //   } elseif (isset($request->remove)) {
-    //     $news->image_path = null;
-    //     unset($news_form['remove']);
+    //     $profile->image_path = null;
+    //     unset($profile_form['remove']);
     //   }
-    //   unset($news_form['_token']);
+    //   unset($profile_form['_token']);
 
     
          $profile->fill($profile_form)->save();
