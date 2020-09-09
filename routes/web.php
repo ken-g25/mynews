@@ -23,6 +23,7 @@ Route::group(['prefix' => 'admin'], function() {
     // Route::post('news/create', 'Admin\NewsController@create')->middleware('auth');
     Route::post('profile/create','Admin\ProfileController@create')->middleware('auth');
     Route::post('profile/edit','Admin\ProfileController@update')->middleware('auth');
+    Route::get('/profile', 'ProfileController@index');
 });
 
 // 課題3
@@ -44,4 +45,5 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('news/edit', 'Admin\NewsController@edit')->middleware('auth'); 
     Route::post('news/edit', 'Admin\NewsController@update')->middleware('auth');
     Route::get('news/delete', 'Admin\NewsController@delete')->middleware('auth');
+    Route::get('/', 'NewsController@index');
 });
