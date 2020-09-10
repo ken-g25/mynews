@@ -70,8 +70,9 @@
                     @endauth
                 </div>
             @endif
-
+            
             <div class="content">
+                <p>Heroku Test</p>
                 <div class="title m-b-md">
                     Laravel
                 </div>

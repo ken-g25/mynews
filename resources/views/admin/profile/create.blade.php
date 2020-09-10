@@ -7,6 +7,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>Myプロフィール作成画面</h2>
+                <h3>※全て必須項目です</h3>
                 <form action="{{ action('Admin\ProfileController@create') }}" method="post" enctype="multipart/form-data">
                 @if (count($errors) > 0)
                     <ul>
